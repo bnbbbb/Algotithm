@@ -1,9 +1,4 @@
 def solution(arr):
-    answer = []
-    while True:
-        answer = arr
-        if bin(len(answer)).count('1') != 1:
-            answer.append(0)
-        else:
-            break
-    return answer
+    while bin(len(arr)).count('1') != 1:
+        arr.append(0)
+    return arr
