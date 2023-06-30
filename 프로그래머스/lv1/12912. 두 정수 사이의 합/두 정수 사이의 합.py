@@ -1,3 +1,2 @@
 def solution(a, b):
-    answer = 0
-    return answer
+    return sum(range(min(a, b), max(a, b) + 1))
