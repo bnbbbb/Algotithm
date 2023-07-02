@@ -1,7 +1,8 @@
 def solution(arr):
+    # 함수를 완성하세요
     answer = []
-    for i in range(1, len(arr)):
-        if arr[i-1] != arr[i]:
-            answer.append(arr[i-1])
-    answer.append(arr[-1])
+    for i in arr:
+        if answer[-1:] == [i]:
+            continue
+        answer.append(i)
     return answer
