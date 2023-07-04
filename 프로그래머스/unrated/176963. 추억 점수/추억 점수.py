@@ -4,8 +4,7 @@ def solution(name, yearning, photo):
     for i in photo:
         total = 0
         for j in i:
-            for key, value in a.items():
-                if j == key:
-                    total += value
+            if j in a:
+                total += a[j]
         answer.append(total)
     return answer
