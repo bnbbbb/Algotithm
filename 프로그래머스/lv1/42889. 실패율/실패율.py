@@ -1,12 +1,15 @@
+from collections import Counter
+
 def solution(N, stages):
-    answer = []
-    dic = {}
-    a = len(stages)
-    for i in range(1, N+1):
-        if a == 0:
-            dic[i] = 0
-        else:
-            dic[i] = (stages.count(i)/a)
-            a -= stages.count(i)
-    answer = sorted(dic, key = dic.get, reverse=True)
+    counter = Counter(stages)
+    total = len(stages)
+    failure_rates = []
+
+    for stage in range(1, N+1):
+        failure_rate = counter[stage] / total if total > 0 else 0
+        failure_rates.append((stage, failure_rate))
+        total -= counter[stage]
+
+    failure_rates.sort(key=lambda x: x[1], reverse=True)
+    answer = [stage for stage, _ in failure_rates]
     return answer
