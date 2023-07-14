@@ -1,14 +1,13 @@
 def solution(n):
     answer = 1
-    idx = 1
-    while idx != n:
-        total = 0
-        for i in range(idx, n+1):
-            total += i
-            if total == n:
+    for i in range(1, n+1):
+        result = i
+        for j in range(i+1, n+1):
+            result += j 
+            if result == n:
                 answer += 1
                 break
-            elif total > n:
+            elif result > n:
                 break
-        idx += 1
+        
     return answer
