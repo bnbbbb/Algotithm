@@ -12,4 +12,5 @@ def solution(k, dungeons):
                 result+= 1
                 a -= j[1]
         answer.append(result)
+        
     return max(answer)
