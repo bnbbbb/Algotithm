@@ -4,6 +4,7 @@ def solution(k, dungeons):
     result = 0
     ans = list(permutations(dungeons, len(dungeons)))
     a = k 
+    
     for i in ans:
         a = k
         result = 0
