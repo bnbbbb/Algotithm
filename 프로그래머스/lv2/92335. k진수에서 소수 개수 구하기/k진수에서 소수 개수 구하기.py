@@ -18,4 +18,5 @@ def solution(n, k):
     for i in result:
         if i and is_prime(int(i)):
             answer += 1
+            
     return answer
