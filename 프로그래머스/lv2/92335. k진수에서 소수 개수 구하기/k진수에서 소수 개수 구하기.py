@@ -6,6 +6,7 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
 def solution(n, k):
     tmp = string.digits+string.ascii_lowercase
     answer = 0
