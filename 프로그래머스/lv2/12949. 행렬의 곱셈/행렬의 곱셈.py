@@ -2,6 +2,7 @@ def solution(arr1, arr2):
     answer = []
     i = 0
     b = 0
+    
     while i != len(arr1):
         a = []
         for j in range(len(arr2[0])):
