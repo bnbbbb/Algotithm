@@ -13,6 +13,4 @@ def solution(record):
         elif record[i][0] == 'Leave':
             status, iden = record[i]
             answer.append(f'{check[iden]}님이 나갔습니다.')
-
-    
     return answer
