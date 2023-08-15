@@ -22,5 +22,4 @@ def solution(maps):
         answer = -1
     else:
         answer = destination
-        
     return answer
