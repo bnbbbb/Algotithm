@@ -7,7 +7,6 @@ def solution(dirs):
     dx = {'R': 1, 'L': -1}
     dy = {'U': 1, 'D': -1}
     nx, ny = 0, 0
-    
     for i in dirs:
         prev_x, prev_y = nx, ny
         
