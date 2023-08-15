@@ -7,5 +7,4 @@ def solution(skill, skill_trees):
                 stack += ski[i]
         if stack == skill or stack == skill[:len(stack)]:
             answer += 1
-
     return answer
