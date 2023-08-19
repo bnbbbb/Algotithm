@@ -24,6 +24,4 @@ def solution(m, n, board):
                             board[i][j] = board[k][j]
                             board[k][j] = '0'
                             break
-
-    
     return answer
