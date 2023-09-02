@@ -1,6 +1,7 @@
 import re
 def solution(files):
     answer = []
+    
     for file in files:
         matches = re.match(r'([a-zA-Z?.+\-\s]+)(\d+)', file)
         if matches:
@@ -9,5 +10,4 @@ def solution(files):
             answer.append((group1, group2, file))
     answer.sort(key= lambda x: (x[0].lower(), int(x[1])))
     answer = [i[2] for i in answer]
-
     return answer
