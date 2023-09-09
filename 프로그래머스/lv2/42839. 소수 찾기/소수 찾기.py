@@ -17,7 +17,6 @@ def solution(numbers):
         for j in perms:
             a = ''.join(j)
             que.add(int(a))
-            
     for perm in set(que):
         if is_prime(perm):
             answer += 1
