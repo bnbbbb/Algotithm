@@ -1,20 +1,23 @@
 def solution(arr):
-    def compress(x, y, n):
-        if n == 1:
-            return [0, 1] if arr[y][x] == 1 else [1, 0]
-        
-        n //= 2
-        results = [compress(x, y, n), compress(x+n, y, n), compress(x, y+n, n), compress(x+n, y+n, n)]
-        
-        total = [0,0]
-        for result in results:
-            total[0] += result[0]
-            total[1] += result[1]
-        if total[0] == 0:
-            return [0, 1]
-        elif total[1] == 0:
-            return [1, 0]
+    answer = [0, 0]
+
+    def check(size, x, y):
+        if size == 1:
+            answer[arr[y][x]] += 1
+            return
         else:
-            return total
-    result = compress(0, 0, len(arr))
-    return result
+            first = arr[y][x]
+
+            for dy in range(size):
+                for dx in range(size):
+                    if first != arr[y + dy][x + dx]:
+                        check(size // 2, x, y)
+                        check(size // 2, x + size // 2, y)
+                        check(size // 2, x, y + size // 2)
+                        check(size // 2, x + size // 2, y + size // 2)
+                        return
+            answer[first] += 1
+    check(len(arr),0,0)
+
+
+    return answer
