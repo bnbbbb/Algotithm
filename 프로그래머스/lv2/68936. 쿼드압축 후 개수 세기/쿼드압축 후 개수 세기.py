@@ -18,6 +18,4 @@ def solution(arr):
                         return
             answer[first] += 1
     check(len(arr),0,0)
-
-
     return answer
