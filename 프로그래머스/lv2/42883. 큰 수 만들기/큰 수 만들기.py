@@ -1,11 +1,8 @@
 def solution(number, k):
-    stack = [number[0]]
-    for num in number[1:]:
-        while len(stack) > 0 and stack[-1] < num and k > 0:
+    st = []
+    for i in range(len(number)):
+        while st and k > 0 and st[-1] < number[i]:
+            st.pop()
             k -= 1
-            stack.pop()
-        stack.append(num)
-    if k != 0:
-        stack = stack[:-k]
-
-    return ''.join(stack)
+        st.append(number[i])
+    return ''.join(st[:len(st) - k])
