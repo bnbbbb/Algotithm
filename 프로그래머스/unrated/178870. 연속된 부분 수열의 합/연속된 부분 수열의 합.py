@@ -6,11 +6,9 @@ def solution(sequence, k):
 
     for end in range(len(sequence)):
         total += sequence[end]
-
         while total > k:
             total -= sequence[start]
-            start += 1
-
+            start += 1 
         if total == k:
             if end - start < min_len:
                 min_len = end - start
