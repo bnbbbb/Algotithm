@@ -20,5 +20,4 @@ def solution(storey):
             answer += mod // (div // 10)
         div *= 10
         loop -= 1
-        
     return answer
