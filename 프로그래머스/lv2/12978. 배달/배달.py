@@ -20,4 +20,5 @@ def solution(n, road, k):
     for distance in dist:
         if distance <= k:
             answer += 1
+
     return answer
