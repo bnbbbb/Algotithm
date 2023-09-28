@@ -6,13 +6,11 @@ def solution(places):
         for y in range(5):
             for x in range(5):
                 if place[y][x] == 'P':
-                    # 상하좌우 방향으로 거리두기 확인
                     for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
                         nx, ny = x + dx, y + dy
                         if is_valid(nx, ny) and place[ny][nx] == 'P':
                             return 0
                     
-                    # 대각선 방향으로 거리두기 확인
                     diagonals = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
                     for dx, dy in diagonals:
                         nx, ny = x + dx, y + dy
@@ -20,7 +18,6 @@ def solution(places):
                             if place[y][nx] != 'X' or place[ny][x] != 'X':
                                 return 0
                     
-                    # "P"와 "X" 사이에 "O"로 빈 자리가 있는 경우 처리
                     for dx, dy in [(0, 2), (0, -2), (2, 0), (-2, 0)]:
                         nx, ny = x + dx, y + dy
                         if is_valid(nx, ny) and place[ny][nx] == 'P':
