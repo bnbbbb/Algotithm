@@ -16,7 +16,6 @@ def solution(book_time):
                 rooms[i] = end_time + 10  
                 available_room = True
                 break
-        
         if not available_room:
             rooms.append(end_time + 10)  
             answer += 1  
