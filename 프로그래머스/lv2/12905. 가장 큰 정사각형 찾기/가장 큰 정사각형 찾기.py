@@ -18,6 +18,5 @@ def solution(board):
     for i in range(rows):
         for j in range(cols):
             answer = max(answer, dp[i][j])
-    
     return answer ** 2  
 
