@@ -13,7 +13,6 @@ def solution(p):
         u = reverse(u)
         answer += u
         return answer
-
 def split_p(p):
     left_count = 0
     right_count = 0
