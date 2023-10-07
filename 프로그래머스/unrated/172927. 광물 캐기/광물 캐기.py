@@ -6,12 +6,14 @@ def solution(picks, minerals):
     dic = {'diamond': picks[0], 'iron': picks[1], 'stone': picks[2]}
     sum_pick = sum(picks)
     count = []
+    
     for i in range(0, min(len(minerals), sum_pick*5), 5):
         dia = minerals[i:i+5].count('diamond')
         iron = minerals[i:i+5].count('iron')
         stone = minerals[i:i+5].count('stone')
         count.append((i, dia, iron, stone))
     count.sort(key = lambda x: (x[1], x[2], x[3]), reverse=True)
+    
     for i in count:
         if dic['diamond'] > 0:
             answer += i[1] + i[2] + i[3]
