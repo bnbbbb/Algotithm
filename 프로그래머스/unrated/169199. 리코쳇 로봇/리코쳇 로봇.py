@@ -8,7 +8,6 @@ def solution(board):
             if x < 0 or y < 0 or x >= x_max or y>=y_max: break
             if board[y][x] == 'D': break
         return y - d[0], x - d[1]
-    
     directions = ((-1, 0), (1, 0), (0, -1), (0, 1))
     q = deque()
     x_max = len(board[0])
