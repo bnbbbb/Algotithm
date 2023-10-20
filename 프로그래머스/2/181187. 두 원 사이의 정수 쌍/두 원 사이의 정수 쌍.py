@@ -13,4 +13,5 @@ def solution(r1, r2):
             answer += (max_x - min_x+1)
         else:
             answer += 1
+            
     return answer*4
