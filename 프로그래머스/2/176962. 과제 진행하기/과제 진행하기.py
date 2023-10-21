@@ -31,5 +31,4 @@ def solution(plans):
 
     while wait:
         answer.append(wait.pop()[0])
-
     return answer
