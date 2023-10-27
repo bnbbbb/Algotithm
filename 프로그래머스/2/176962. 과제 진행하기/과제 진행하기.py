@@ -1,6 +1,4 @@
 from collections import deque
-
-
 def solution(plans):
     def get_time(time):
         hour, minute = int(time[0:2]), int(time[3:5])
@@ -8,7 +6,6 @@ def solution(plans):
     plans = sorted(list(
         map(lambda x: [x[0], get_time(x[1]), int(x[2])], plans)), key=lambda x: x[1])
     answer, wait, now = [], deque([plans[0]]), plans[0][1]
-
     for i, v in enumerate(plans[1:]):
         next_time = v[1]
 
@@ -27,7 +24,6 @@ def solution(plans):
                 break
 
         wait.append(v)
-
     while wait:
         answer.append(wait.pop()[0])
     return answer
