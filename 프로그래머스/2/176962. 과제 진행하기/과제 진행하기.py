@@ -8,7 +8,6 @@ def solution(plans):
     answer, wait, now = [], deque([plans[0]]), plans[0][1]
     for i, v in enumerate(plans[1:]):
         next_time = v[1]
-
         while wait:
             j, t, q = wait.pop()
             if t > now:
