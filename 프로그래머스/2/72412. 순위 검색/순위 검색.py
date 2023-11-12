@@ -2,7 +2,6 @@ import re
 
 def solution(info, query):
     answer = []
-
     info_dict = {}
     
     for i in info:
@@ -43,5 +42,4 @@ def solution(info, query):
             answer.append(len(scores) - left)
         else:
             answer.append(0)
-    
     return answer
