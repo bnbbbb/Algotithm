@@ -1,5 +1,4 @@
 from heapq import heappush, heappop
-
 def solution(n, k, enemy):
     h = []
     for i, e in enumerate(enemy):
