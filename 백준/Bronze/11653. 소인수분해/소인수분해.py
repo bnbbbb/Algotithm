@@ -1,22 +1,21 @@
-def is_prime(number):
-    if number < 2:
-        return False 
+def prime_factors(n):
+    factors = []
 
-    for i in range(3, int(number**0.5) + 1):
-        if number % i == 0:
-            return False  
+    while n % 2 == 0:
+        factors.append(2)
+        n //= 2
 
-    return True
+    for i in range(3, int(n**0.5) + 1, 2):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
 
-a = int(input())
-idx = 3
-while a != 1:
-    if a % 2 == 0:
-        print(2)
-        a //= 2 
-    elif a % 2 != 0 and a % idx == 0 and is_prime(idx):
-        print(idx)
-        a //= idx 
-        idx = 3
-    else:
-        idx += 1
+    if n > 2:
+        factors.append(n)
+
+    return factors
+
+n = int(input())
+result = prime_factors(n)
+for i in result:
+    print(i)
