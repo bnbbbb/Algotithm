@@ -7,6 +7,5 @@ def solution(n, k, enemy):
         if len(h) > k:
             n -= heappop(h)
         if n < 0:
-            return i
-        
+            return i 
     return len(enemy)
