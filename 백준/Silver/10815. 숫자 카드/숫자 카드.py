@@ -1,10 +1,10 @@
-a = input().rstrip()
-n = set(map(int, input().split()))
-a1 = input().rstrip()
-n1 = list(map(int, input().split()))
-
+import sys
+a = sys.stdin.readline().rstrip()
+n = set(sys.stdin.readline().split())
+a1 = sys.stdin.readline().rstrip()
+n1 = sys.stdin.readline().split()
 for i in n1:
     if i in n:
-        print('1', end=' ')
+        sys.stdout.write('1 ')
     else:
-        print('0', end=' ')
+        sys.stdout.write('0 ')
