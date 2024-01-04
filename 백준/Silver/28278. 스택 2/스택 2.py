@@ -1,27 +1,19 @@
 import sys
+
 stack = []
+
 for _ in range(int(input())):
     num = sys.stdin.readline().split()
-    if len(num) > 1:
-        n, m = int(num[0]), int(num[1])
+    n = int(num[0])
+    
+    if n == 1:
+        m = int(num[1])
         stack.append(m)
-    else:
-        n = int(num[0])
-        if n == 2:
-            if stack:
-                print(stack.pop(-1))
-            else:
-                print(-1)
-        elif n == 3:
-            print(len(stack))
-        elif n == 4:
-            if stack:
-                print(0)
-            else:
-                print(1)
-        else:
-            if stack:
-                print(stack[-1])
-            else:
-                print(-1)
-            
+    elif n == 2:
+        print(stack.pop() if stack else -1)
+    elif n == 3:
+        print(len(stack))
+    elif n == 4:
+        print(0 if stack else 1)
+    elif n == 5:
+        print(stack[-1] if stack else -1)
