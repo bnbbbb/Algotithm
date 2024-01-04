@@ -1,7 +1,10 @@
 from collections import deque
+import sys
+
 arr = deque()
-for _ in range(int(input())):
-    n = int(input())
+
+for line in sys.stdin.readlines()[1:]:
+    n = int(line)
     if n == 0:
         arr.pop()
     else:
