@@ -8,4 +8,5 @@ def solution(k, tangerine):
         answer+=1
         if k <= 0:
             break
+        
     return answer
