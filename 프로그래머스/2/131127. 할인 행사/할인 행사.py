@@ -1,5 +1,4 @@
 from collections import Counter
-
 def solution(want, number, discount):
     answer = 0
     a = dict(zip(want, number))
