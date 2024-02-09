@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 n = int(input())
 milks = [int(input()) for _ in range(n)]
 milks.sort(reverse=True)
