@@ -1,9 +1,7 @@
-
 import sys
 
 def meeting(meetings):
     meetings.sort(key=lambda x: (x[1], x[0]))
-    
     selected_meetings = []
     end_time = 0
     
