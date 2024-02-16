@@ -1,7 +1,8 @@
+import sys
 games = {'Y': 2, 'F': 3, 'O': 4}
 
-n, g = input().split()
+n, g = sys.stdin.readline().split()
 
-names = set([input() for _ in range(int(n))])
+names = set([sys.stdin.readline() for _ in range(int(n))])
 
 print(len(names)//(games[g]-1))
