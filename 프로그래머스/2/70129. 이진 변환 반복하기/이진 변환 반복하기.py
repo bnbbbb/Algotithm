@@ -10,4 +10,5 @@ def solution(s):
         count += 1
         s = bin(sle)[2:]
     answer.extend([count, zero])
+    
     return answer
