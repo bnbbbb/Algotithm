@@ -1,15 +1,9 @@
 import sys
 
 def count_visited(n, x, visited):
-    max_visit = 0
-    count_max_visit = 0
+    count_max_visit = 1
     current_sum = sum(visited[:x])
-
-    if current_sum > max_visit:
-        max_visit = current_sum
-        count_max_visit = 1
-    elif current_sum == max_visit:
-        count_max_visit += 1
+    max_visit = current_sum
 
     for i in range(x, n):
         current_sum = current_sum - visited[i - x] + visited[i]
