@@ -7,8 +7,9 @@ def solution(prices):
             j = stack.pop()
             answer[j] = i-j
         stack.append(i)
-        
+
     while stack:
         j = stack.pop()
         answer[j] = len(prices) -1 -j
+        
     return answer
