@@ -21,8 +21,8 @@ def solution(dirs):
                 ny += dy[i]
             else:
                 continue
+                
         path = tuple(sorted([(prev_x, prev_y), (nx, ny)]))
-        
         if path not in result:
             result.add(path)
             answer += 1
