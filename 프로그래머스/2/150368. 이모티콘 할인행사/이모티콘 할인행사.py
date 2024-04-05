@@ -17,5 +17,4 @@ def solution(users, emoticons):
                 max_total += purchased
         result.append((plus, max_total))
     answer = sorted(result, key = lambda x: (x[0], x[1]), reverse=True)
-    
     return answer[0]
