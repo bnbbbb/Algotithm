@@ -3,5 +3,4 @@ def solution(n):
     
     for _ in range(n-1):
         prev , next = next, prev + next
-        
     return next % 1234567
