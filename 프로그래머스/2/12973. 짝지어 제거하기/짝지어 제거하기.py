@@ -5,4 +5,5 @@ def solution(s):
             stack.pop()
         else:
             stack.append(i)
+            
     return 1 if not stack else 0
