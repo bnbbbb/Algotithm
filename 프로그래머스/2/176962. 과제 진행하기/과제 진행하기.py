@@ -13,7 +13,6 @@ def solution(plans):
             if t > now:
                 now = t
             lest = now + q
-
             if lest <= next_time:
                 now += q
                 answer.append(j)
