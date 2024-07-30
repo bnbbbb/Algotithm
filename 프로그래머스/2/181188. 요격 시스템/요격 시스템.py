@@ -5,4 +5,5 @@ def solution(targets):
             m.append(e)
         else: 
             m[-1] = min(m[-1], e)
+            
     return len(m)-1
