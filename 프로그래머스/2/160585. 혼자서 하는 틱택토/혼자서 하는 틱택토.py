@@ -13,7 +13,6 @@ def solution(board):
     # "O"가 "X"보다 많거나 "X"가 "O"보다 많으면 올바르지 않음
     if count_x > count_o or count_o > count_x + 1:
         return 0
-
     o_wins = check_win("O")
     x_wins = check_win("X")
     if o_wins:
