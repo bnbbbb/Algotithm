@@ -2,7 +2,6 @@ def solution(cap, n, deliveries, pickups):
     deliveries = deliveries[::-1]
     pickups = pickups[::-1]
     answer = 0
-
     to_deli = 0
     to_pick = 0
 
