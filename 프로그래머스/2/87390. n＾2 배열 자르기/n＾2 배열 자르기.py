@@ -4,5 +4,4 @@ def solution(n, left, right):
         row, col = divmod(num, n)
         max_val = max(row, col)
         answer.append(max_val + 1)
-        
     return answer
