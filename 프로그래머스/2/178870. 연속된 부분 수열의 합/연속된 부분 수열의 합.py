@@ -12,5 +12,4 @@ def solution(sequence, k):
             if end - start < min_len:
                 min_len = end - start
                 answer = [start, end]
-
     return answer if answer else []
