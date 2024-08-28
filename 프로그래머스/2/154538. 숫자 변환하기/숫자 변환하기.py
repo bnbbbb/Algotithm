@@ -14,7 +14,6 @@ def solution(x, y, n):
             dp[i*2] = min(dp[i*2], dp[i]+1)
         if i * 3 <= y:
             dp[i*3] = min(dp[i*3], dp[i]+1)
-    
     if dp[y] == float('inf'):
         return -1
     return dp[y]
