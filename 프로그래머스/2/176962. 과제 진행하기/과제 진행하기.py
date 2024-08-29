@@ -20,7 +20,6 @@ def solution(plans):
                 now = next_time
                 wait.append([j, t, lest - next_time])
                 break
-
         wait.append(v)
     while wait:
         answer.append(wait.pop()[0])
