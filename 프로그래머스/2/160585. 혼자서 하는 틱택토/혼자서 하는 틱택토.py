@@ -25,7 +25,6 @@ def solution(board):
             return 0
         elif not o_wins and count_x == count_o:
             return 1
-
     if not x_wins and not o_wins:
         if count_x + count_o == 9:
             return 1 
