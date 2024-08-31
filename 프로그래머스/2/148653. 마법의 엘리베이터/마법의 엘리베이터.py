@@ -11,7 +11,6 @@ def solution(storey):
     elif one == 5 and two < 50:
         storey -= one
         answer += one // (div // 10)
- 
     while storey != 0:
         mod = storey % div
         if mod > 5 * div//10:
