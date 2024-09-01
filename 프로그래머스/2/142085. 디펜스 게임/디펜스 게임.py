@@ -8,4 +8,5 @@ def solution(n, k, enemy):
             n -= heappop(h)
         if n < 0:
             return i 
+        
     return len(enemy)
