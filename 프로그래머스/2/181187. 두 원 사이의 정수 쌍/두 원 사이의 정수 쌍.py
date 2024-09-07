@@ -1,4 +1,5 @@
 import math
+
 def solution(r1, r2):
     answer = 0
     for y in range(1, r2+1):
